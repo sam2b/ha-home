@@ -1,0 +1,49 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+binary_sensor: !include binary_sensor.yaml
+device_tracker: !include device_tracker.yaml
+light: !include light.yaml
+sensor: !include sensor.yaml
+
+sun:
+
+alarm_control_panel:
+  - platform: manual
+    name: home_security
+    code: !secret security_home_code
+    arming_time: 60
+    delay_time: 60
+
+media_player:
+  - platform: squeezebox
+    host: !secret ip_logitechMediaServer
+    port: 9000
+    username: !secret squeeze_username
+    password: !secret squeeze_password
+
+hacs:
+  token: !secret github_token_hacs
+
+octoprint:
+  host: !secret ip_octoPrint
+  api_key: !secret api_octoprint
+  port: 5000
+  name: Ender3
+  bed: true
+  number_of_tools: 1
+
+camera:
+  - platform: mjpeg
+    name: Ender3 Cam
+    still_image_url: http://192.168.1.122:8081/?action=snapshot
+    mjpeg_url: http://192.168.1.122:8081/?action=stream

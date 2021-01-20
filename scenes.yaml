@@ -1,0 +1,1916 @@
+- id: '1609393057733'
+  name: Livingroom Bulbs 30
+  entities:
+    zwave.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module:
+      node_id: 42
+      node_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: PD300Z-2 Plug-in Dimmer Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 1
+      - 8
+      - 14
+      - 16
+      - 18
+      - 20
+      - 21
+      - 23
+      - 24
+      - 26
+      - 32
+      - 35
+      - 38
+      - 39
+      - 41
+      - 46
+      - 52
+      - 53
+      - 54
+      - 58
+      - 59
+      sentCnt: 446
+      sentFailed: 1
+      retries: 11
+      receivedCnt: 295
+      receivedDups: 18
+      receivedUnsolicited: 2
+      sentTS: '2021-01-01 17:19:28:815 '
+      receivedTS: '2021-01-01 17:19:28:848 '
+      lastRequestRTT: 22
+      averageRequestRTT: 22
+      lastResponseRTT: 32
+      averageResponseRTT: 32
+      application_version: '5.41'
+      friendly_name: Dimmer Livingroom
+      state: ready
+    light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level:
+      brightness: 77
+      node_id: 42
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594747387905'
+      friendly_name: Dimmer Livingroom Level
+      supported_features: 1
+      state: 'on'
+    light.sengled_livingroom_1_level_on_off:
+      brightness: 76
+      off_brightness:
+      friendly_name: Sengled Livingroom 1 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.sengled_livingroom_2_level_on_off:
+      brightness: 76
+      off_brightness:
+      friendly_name: Sengled Livingroom 2 level, on_off
+      supported_features: 41
+      state: 'on'
+- id: '1609393353820'
+  name: Livingroom Bulbs 50
+  entities:
+    zwave.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module:
+      node_id: 42
+      node_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: PD300Z-2 Plug-in Dimmer Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 1
+      - 8
+      - 14
+      - 16
+      - 18
+      - 20
+      - 21
+      - 23
+      - 24
+      - 26
+      - 32
+      - 35
+      - 38
+      - 39
+      - 41
+      - 46
+      - 52
+      - 53
+      - 54
+      - 58
+      - 59
+      sentCnt: 450
+      sentFailed: 1
+      retries: 11
+      receivedCnt: 297
+      receivedDups: 18
+      receivedUnsolicited: 2
+      sentTS: '2021-01-01 17:19:50:974 '
+      receivedTS: '2021-01-01 17:19:51:005 '
+      lastRequestRTT: 22
+      averageRequestRTT: 22
+      lastResponseRTT: 32
+      averageResponseRTT: 31
+      application_version: '5.41'
+      friendly_name: Dimmer Livingroom
+      state: ready
+    light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level:
+      brightness: 129
+      node_id: 42
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594747387905'
+      friendly_name: Dimmer Livingroom Level
+      supported_features: 1
+      state: 'on'
+    light.sengled_livingroom_1_level_on_off:
+      brightness: 128
+      off_brightness:
+      friendly_name: Sengled Livingroom 1 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.sengled_livingroom_2_level_on_off:
+      brightness: 128
+      off_brightness:
+      friendly_name: Sengled Livingroom 2 level, on_off
+      supported_features: 41
+      state: 'on'
+- id: '1609393474782'
+  name: Livingroom Bulbs 100
+  entities:
+    zwave.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module:
+      node_id: 42
+      node_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: PD300Z-2 Plug-in Dimmer Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 1
+      - 8
+      - 14
+      - 16
+      - 18
+      - 20
+      - 21
+      - 23
+      - 24
+      - 26
+      - 32
+      - 35
+      - 38
+      - 39
+      - 41
+      - 46
+      - 52
+      - 53
+      - 54
+      - 58
+      - 59
+      sentCnt: 442
+      sentFailed: 1
+      retries: 11
+      receivedCnt: 293
+      receivedDups: 18
+      receivedUnsolicited: 2
+      sentTS: '2021-01-01 17:18:47:455 '
+      receivedTS: '2021-01-01 17:18:47:487 '
+      lastRequestRTT: 22
+      averageRequestRTT: 22
+      lastResponseRTT: 31
+      averageResponseRTT: 33
+      application_version: '5.41'
+      friendly_name: Dimmer Livingroom
+      state: ready
+    light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level:
+      brightness: 255
+      node_id: 42
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594747387905'
+      friendly_name: Dimmer Livingroom Level
+      supported_features: 1
+      state: 'on'
+    light.sengled_livingroom_1_level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Sengled Livingroom 1 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.sengled_livingroom_2_level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Sengled Livingroom 2 level, on_off
+      supported_features: 41
+      state: 'on'
+- id: '1609393639818'
+  name: Kitchen Bulbs 30
+  entities:
+    light.cree_kitchen_4level_on_off:
+      brightness: 76
+      off_brightness:
+      friendly_name: Cree Kitchen 4 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.osram_kitchen_3_level_on_off:
+      brightness: 76
+      off_brightness:
+      friendly_name: OSRAM Kitchen 3 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.osram_tunable_kitchen_1_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 76
+      color_temp: 370
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 1 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+    light.osram_tunable_kitchen_2_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 76
+      color_temp: 370
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 2 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+- id: '1609393715428'
+  name: Kitchen Bulbs Tuned Warm
+  entities:
+    light.osram_tunable_kitchen_1_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 3
+      color_temp: 370
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 1 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+    light.osram_tunable_kitchen_2_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 3
+      color_temp: 370
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 2 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+- id: '1609393762450'
+  name: Kitchen Bulbs Tuned Bright
+  entities:
+    light.osram_tunable_kitchen_1_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 3
+      color_temp: 207
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 1 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+    light.osram_tunable_kitchen_2_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 3
+      color_temp: 208
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 2 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+- id: '1609393928739'
+  name: All Lights Off
+  entities:
+    zwave.evolve_guest_controls_unknown_type_4450_id_3030:
+      node_id: 59
+      node_name: 'Evolve Guest Controls Unknown: type=4450, id=3030'
+      manufacturer_name: Evolve Guest Controls
+      product_name: 'Unknown: type=4450, id=3030'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - listening
+      - beaming
+      neighbors:
+      - 32
+      - 1
+      - 8
+      - 42
+      - 46
+      - 18
+      - 23
+      - 24
+      - 58
+      - 60
+      sentCnt: 827
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 567
+      receivedDups: 66
+      receivedUnsolicited: 60
+      sentTS: '2021-01-14 17:19:29:797 '
+      receivedTS: '2021-01-14 17:19:29:828 '
+      lastRequestRTT: 21
+      averageRequestRTT: 21
+      lastResponseRTT: 30
+      averageResponseRTT: 30
+      application_version: '5.21'
+      friendly_name: Dimmer Bedroom
+      state: ready
+    light.evolve_guest_controls_unknown_type_4450_id_3030_level:
+      node_id: 59
+      value_index: 0
+      value_instance: 1
+      value_id: '72057595032600577'
+      friendly_name: Dimmer Bedroom Level
+      supported_features: 1
+      state: 'off'
+    light.cree_guest_1level_on_off:
+      off_brightness:
+      friendly_name: Cree Guest 1 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.cree_guest_2level_on_off:
+      off_brightness:
+      friendly_name: Cree Guest 2 level, on_off
+      supported_features: 41
+      state: 'off'
+    zwave.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module:
+      node_id: 42
+      node_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: PD300Z-2 Plug-in Dimmer Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - listening
+      - beaming
+      neighbors:
+      - 1
+      - 8
+      - 14
+      - 16
+      - 18
+      - 20
+      - 21
+      - 23
+      - 24
+      - 26
+      - 32
+      - 35
+      - 38
+      - 39
+      - 41
+      - 46
+      - 52
+      - 53
+      - 54
+      - 58
+      - 59
+      - 60
+      sentCnt: 469
+      sentFailed: 0
+      retries: 2
+      receivedCnt: 320
+      receivedDups: 3
+      receivedUnsolicited: 5
+      sentTS: '2021-01-14 18:15:02:168 '
+      receivedTS: '2021-01-14 18:15:02:199 '
+      lastRequestRTT: 21
+      averageRequestRTT: 21
+      lastResponseRTT: 30
+      averageResponseRTT: 30
+      application_version: '5.41'
+      friendly_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer
+        Module
+      state: ready
+    light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level:
+      node_id: 42
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594747387905'
+      friendly_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer
+        Module Level
+      supported_features: 1
+      state: 'off'
+    light.sengled_livingroom_1_level_on_off:
+      off_brightness:
+      friendly_name: Sengled Livingroom 1 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.sengled_livingroom_2_level_on_off:
+      off_brightness:
+      friendly_name: Sengled Livingroom 2 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.cree_garage_1level_on_off:
+      off_brightness:
+      friendly_name: Cree Garage 1 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.cree_garage_2_level_on_off:
+      off_brightness:
+      friendly_name: Cree Garage 2 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.cree_kitchen_4level_on_off:
+      off_brightness:
+      friendly_name: Cree Kitchen 4 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.osram_kitchen_3_level_on_off:
+      off_brightness:
+      friendly_name: OSRAM Kitchen 3 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.osram_tunable_kitchen_2_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 2 level, light_color, on_off
+      supported_features: 43
+      state: 'off'
+    light.osram_tunable_kitchen_1_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 1 level, light_color, on_off
+      supported_features: 43
+      state: 'off'
+    light.wled_vlamp:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-vlamp
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'off'
+    light.wled_5mstrip:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      intensity: 154
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 200
+      friendly_name: WLED-5mStrip
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'off'
+    switch.wled_5mstrip_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-5mStrip Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_5mstrip_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-5mStrip Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_5mstrip_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-5mStrip Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    switch.cellular_lamp:
+      friendly_name: Cellular Lamp
+      state: 'off'
+- id: '1609437094524'
+  name: Kitchen Bulbs 100
+  entities:
+    light.cree_kitchen_4level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Cree Kitchen 4 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.osram_kitchen_3_level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: OSRAM Kitchen 3 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.osram_tunable_kitchen_1_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 254
+      color_temp: 206
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 1 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+    light.osram_tunable_kitchen_2_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 254
+      color_temp: 201
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 2 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+- id: '1609438499919'
+  name: Bedroom Bulbs 30
+  entities:
+    zwave.evolve_guest_controls_unknown_type_4450_id_3030:
+      node_id: 59
+      node_name: 'Evolve Guest Controls Unknown: type=4450, id=3030'
+      manufacturer_name: Evolve Guest Controls
+      product_name: 'Unknown: type=4450, id=3030'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 32
+      - 1
+      - 8
+      - 42
+      - 46
+      - 18
+      - 23
+      - 24
+      - 58
+      sentCnt: 175
+      sentFailed: 1
+      retries: 0
+      receivedCnt: 340
+      receivedDups: 139
+      receivedUnsolicited: 163
+      sentTS: '2020-12-31 10:14:18:378 '
+      receivedTS: '2020-12-31 10:14:19:762 '
+      lastRequestRTT: 943
+      averageRequestRTT: 591
+      lastResponseRTT: 978
+      averageResponseRTT: 841
+      application_version: '5.21'
+      friendly_name: Dimmer Bedroom
+      state: ready
+    light.evolve_guest_controls_unknown_type_4450_id_3030_level:
+      brightness: 77
+      node_id: 59
+      value_index: 0
+      value_instance: 1
+      value_id: '72057595032600577'
+      friendly_name: Dimmer Bedroom Level
+      supported_features: 1
+      state: 'on'
+- id: '1609438532266'
+  name: Bedroom Bulbs 100
+  entities:
+    zwave.evolve_guest_controls_unknown_type_4450_id_3030:
+      node_id: 59
+      node_name: 'Evolve Guest Controls Unknown: type=4450, id=3030'
+      manufacturer_name: Evolve Guest Controls
+      product_name: 'Unknown: type=4450, id=3030'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 32
+      - 1
+      - 8
+      - 42
+      - 46
+      - 18
+      - 23
+      - 24
+      - 58
+      sentCnt: 179
+      sentFailed: 1
+      retries: 0
+      receivedCnt: 353
+      receivedDups: 144
+      receivedUnsolicited: 172
+      sentTS: '2020-12-31 10:15:24:690 '
+      receivedTS: '2020-12-31 10:15:26:016 '
+      lastRequestRTT: 395
+      averageRequestRTT: 299
+      lastResponseRTT: 771
+      averageResponseRTT: 564
+      application_version: '5.21'
+      friendly_name: Dimmer Bedroom
+      state: ready
+    light.evolve_guest_controls_unknown_type_4450_id_3030_level:
+      brightness: 255
+      node_id: 59
+      value_index: 0
+      value_instance: 1
+      value_id: '72057595032600577'
+      friendly_name: Dimmer Bedroom Level
+      supported_features: 1
+      state: 'on'
+- id: '1609691190845'
+  name: Sceen Temperature Night
+  entities:
+    climate.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat_mode:
+      hvac_modes:
+      - heat
+      - cool
+      - heat_cool
+      - 'off'
+      min_temp: 45
+      max_temp: 95
+      fan_modes:
+      - On Low
+      - Auto Low
+      current_temperature: 68
+      temperature: 68
+      target_temp_high:
+      target_temp_low:
+      fan_mode: Auto Low
+      hvac_action: idle
+      aux_heat: 'off'
+      node_id: 8
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594177388548'
+      fan_action: Idle
+      friendly_name: Thermostat Mode
+      supported_features: 75
+      state: heat
+    zwave.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat:
+      node_id: 8
+      node_name: Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave
+        Thermostat
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: GC-TBZ48 Battery Powered Z-Wave Thermostat
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - beaming
+      - frequent
+      neighbors:
+      - 32
+      - 1
+      - 42
+      - 46
+      - 18
+      - 23
+      - 24
+      - 58
+      - 59
+      sentCnt: 23
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 18
+      receivedDups: 1
+      receivedUnsolicited: 2
+      sentTS: '2021-01-03 23:54:34:521 '
+      receivedTS: '2021-01-03 23:54:34:553 '
+      lastRequestRTT: 23
+      averageRequestRTT: 121
+      lastResponseRTT: 32
+      averageResponseRTT: 219
+      battery_level: 60
+      application_version: '1.06'
+      friendly_name: Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered
+        Z-Wave Thermostat
+      state: ready
+- id: '1609747058726'
+  name: Sceen Temperature Day
+  entities:
+    climate.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat_mode:
+      hvac_modes:
+      - heat
+      - cool
+      - heat_cool
+      - 'off'
+      min_temp: 45
+      max_temp: 95
+      fan_modes:
+      - On Low
+      - Auto Low
+      current_temperature: 67
+      temperature: 69
+      target_temp_high:
+      target_temp_low:
+      fan_mode: Auto Low
+      hvac_action: idle
+      aux_heat: 'off'
+      node_id: 8
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594177388548'
+      fan_action: Idle
+      friendly_name: Thermostat Mode
+      supported_features: 75
+      state: heat
+    zwave.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat:
+      node_id: 8
+      node_name: Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered Z-Wave
+        Thermostat
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: GC-TBZ48 Battery Powered Z-Wave Thermostat
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - beaming
+      - frequent
+      neighbors:
+      - 32
+      - 1
+      - 42
+      - 46
+      - 18
+      - 23
+      - 24
+      - 58
+      - 59
+      sentCnt: 45
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 30
+      receivedDups: 6
+      receivedUnsolicited: 3
+      sentTS: '2021-01-03 23:57:36:860 '
+      receivedTS: '2021-01-03 23:57:38:387 '
+      lastRequestRTT: 22
+      averageRequestRTT: 364
+      lastResponseRTT: 1528
+      averageResponseRTT: 780
+      battery_level: 60
+      application_version: '1.06'
+      friendly_name: Linear (Nortek Security Control LLC) GC-TBZ48 Battery Powered
+        Z-Wave Thermostat
+      state: ready
+- id: '1609989665815'
+  name: All Lights On
+  entities:
+    zwave.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module:
+      node_id: 42
+      node_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: PD300Z-2 Plug-in Dimmer Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - beaming
+      - listening
+      neighbors:
+      - 1
+      - 8
+      - 14
+      - 16
+      - 18
+      - 20
+      - 21
+      - 23
+      - 24
+      - 26
+      - 32
+      - 35
+      - 38
+      - 39
+      - 41
+      - 46
+      - 52
+      - 53
+      - 54
+      - 58
+      - 59
+      - 60
+      sentCnt: 366
+      sentFailed: 0
+      retries: 1
+      receivedCnt: 252
+      receivedDups: 6
+      receivedUnsolicited: 8
+      sentTS: '2021-01-07 18:47:05:975 '
+      receivedTS: '2021-01-07 18:47:06:088 '
+      lastRequestRTT: 53
+      averageRequestRTT: 52
+      lastResponseRTT: 114
+      averageResponseRTT: 107
+      application_version: '5.41'
+      friendly_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer
+        Module
+      state: ready
+    light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level:
+      brightness: 255
+      node_id: 42
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594747387905'
+      friendly_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer
+        Module Level
+      supported_features: 1
+      state: 'on'
+    light.sengled_livingroom_1_level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Sengled Livingroom 1 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.sengled_livingroom_2_level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Sengled Livingroom 2 level, on_off
+      supported_features: 41
+      state: 'on'
+    switch.cellular_lamp:
+      friendly_name: Cellular Lamp
+      state: 'on'
+    light.cree_kitchen_4level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Cree Kitchen 4 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.osram_kitchen_3_level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: OSRAM Kitchen 3 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.osram_tunable_kitchen_2_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 254
+      color_temp: 201
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 2 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+    light.osram_tunable_kitchen_1_level_light_color_on_off:
+      min_mireds: 153
+      max_mireds: 370
+      brightness: 250
+      color_temp: 206
+      off_brightness:
+      friendly_name: OSRAM Tunable Kitchen 1 level, light_color, on_off
+      supported_features: 43
+      state: 'on'
+    zwave.evolve_guest_controls_unknown_type_4450_id_3030:
+      node_id: 59
+      node_name: 'Evolve Guest Controls Unknown: type=4450, id=3030'
+      manufacturer_name: Evolve Guest Controls
+      product_name: 'Unknown: type=4450, id=3030'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - beaming
+      - listening
+      neighbors:
+      - 32
+      - 1
+      - 8
+      - 42
+      - 46
+      - 18
+      - 23
+      - 24
+      - 58
+      - 60
+      sentCnt: 682
+      sentFailed: 0
+      retries: 3
+      receivedCnt: 423
+      receivedDups: 23
+      receivedUnsolicited: 1
+      sentTS: '2021-01-07 18:47:19:054 '
+      receivedTS: '2021-01-07 18:47:19:086 '
+      lastRequestRTT: 22
+      averageRequestRTT: 23
+      lastResponseRTT: 32
+      averageResponseRTT: 36
+      application_version: '5.21'
+      friendly_name: Dimmer Bedroom
+      state: ready
+    light.evolve_guest_controls_unknown_type_4450_id_3030_level:
+      brightness: 255
+      node_id: 59
+      value_index: 0
+      value_instance: 1
+      value_id: '72057595032600577'
+      friendly_name: Dimmer Bedroom Level
+      supported_features: 1
+      state: 'on'
+    light.cree_guest_1level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Cree Guest 1 level, on_off
+      supported_features: 41
+      state: 'on'
+    light.cree_guest_2level_on_off:
+      brightness: 254
+      off_brightness:
+      friendly_name: Cree Guest 2 level, on_off
+      supported_features: 41
+      state: 'on'
+- id: '1610676875309'
+  name: Movie Livingroom
+  entities:
+    light.wled_5mstrip:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      brightness: 13
+      hs_color:
+      - 48
+      - 1.961
+      rgb_color:
+      - 255
+      - 253
+      - 249
+      xy_color:
+      - 0.328
+      - 0.333
+      effect: Pacifica
+      intensity: 154
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 200
+      friendly_name: WLED-5mStrip
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+    switch.wled_5mstrip_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-5mStrip Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_5mstrip_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-5mStrip Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_5mstrip_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-5mStrip Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    light.wled_vlamp:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      brightness: 15
+      hs_color:
+      - 37.412
+      - 100
+      rgb_color:
+      - 255
+      - 159
+      - 0
+      xy_color:
+      - 0.57
+      - 0.41
+      effect: Chase Rainbow
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-vlamp
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+    switch.cellular_lamp:
+      friendly_name: Cellular Lamp
+      state: 'off'
+    zwave.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module:
+      node_id: 42
+      node_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer Module
+      manufacturer_name: Linear (Nortek Security Control LLC)
+      product_name: PD300Z-2 Plug-in Dimmer Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - listening
+      - beaming
+      neighbors:
+      - 1
+      - 8
+      - 14
+      - 16
+      - 18
+      - 20
+      - 21
+      - 23
+      - 24
+      - 26
+      - 32
+      - 35
+      - 38
+      - 39
+      - 41
+      - 46
+      - 52
+      - 53
+      - 54
+      - 58
+      - 59
+      - 60
+      sentCnt: 463
+      sentFailed: 0
+      retries: 2
+      receivedCnt: 316
+      receivedDups: 3
+      receivedUnsolicited: 5
+      sentTS: '2021-01-14 18:13:04:030 '
+      receivedTS: '2021-01-14 18:13:04:061 '
+      lastRequestRTT: 21
+      averageRequestRTT: 21
+      lastResponseRTT: 30
+      averageResponseRTT: 30
+      application_version: '5.41'
+      friendly_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer
+        Module
+      state: ready
+    light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level:
+      node_id: 42
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594747387905'
+      friendly_name: Linear (Nortek Security Control LLC) PD300Z-2 Plug-in Dimmer
+        Module Level
+      supported_features: 1
+      state: 'off'
+    light.sengled_livingroom_1_level_on_off:
+      off_brightness:
+      friendly_name: Sengled Livingroom 1 level, on_off
+      supported_features: 41
+      state: 'off'
+    light.sengled_livingroom_2_level_on_off:
+      off_brightness:
+      friendly_name: Sengled Livingroom 2 level, on_off
+      supported_features: 41
+      state: 'off'
+- id: '1610755072341'
+  name: Movie Intermission
+  entities:
+    light.wled_5mstrip:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      brightness: 255
+      hs_color:
+      - 40
+      - 2.353
+      rgb_color:
+      - 255
+      - 252
+      - 248
+      xy_color:
+      - 0.329
+      - 0.333
+      effect: Pacifica
+      intensity: 154
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 200
+      friendly_name: 5mStrip
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+    switch.wled_5mstrip_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: 5mStrip Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_5mstrip_sync_send:
+      udp_port: 21324
+      friendly_name: 5mStrip Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_5mstrip_sync_receive:
+      udp_port: 21324
+      friendly_name: 5mStrip Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    switch.cellular_lamp:
+      friendly_name: Cellular Lamp
+      state: 'on'
+    light.wled_vlamp:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blends
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Candy Cane
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Washing Machine
+      - Wipe
+      - Wipe Random
+      brightness: 255
+      hs_color:
+      - 37.412
+      - 100
+      rgb_color:
+      - 255
+      - 159
+      - 0
+      xy_color:
+      - 0.57
+      - 0.41
+      effect: Chase Rainbow
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-vlamp
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+    light.livingroom_lights:
+      brightness: 46
+      entity_id:
+      - light.sengled_livingroom_1_level_on_off
+      - light.sengled_livingroom_2_level_on_off
+      - light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level
+      friendly_name: Livingroom Lights
+      icon: mdi:lightbulb-group
+      supported_features: 41
+      state: 'on'

@@ -1,0 +1,1988 @@
+- id: '1609138686495'
+  alias: Lights Livingroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.occupance_livingroom
+    from: 'off'
+    to: 'on'
+  - platform: state
+    entity_id: media_player.livingroom_tv
+    to: 'off'
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - choose:
+    - conditions:
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: input_select.mode
+          state: MOVIE
+      sequence:
+      - service: light.turn_on
+        data: {}
+        entity_id: light.livingroom_lights
+    default: []
+  - service: light.turn_off
+    data: {}
+    entity_id: light.kitchen_lights
+  - choose:
+    - conditions:
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: input_select.mode
+          state: MOVIE
+      sequence:
+      - service: light.turn_off
+        data: {}
+        entity_id: light.bedroom_lights
+    default: []
+  - service: light.turn_off
+    data: {}
+    entity_id: light.guestroom_lights
+  mode: single
+- id: '1609140724250'
+  alias: Lights Kitchen
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.occupance_kitchen
+    to: 'on'
+    from: 'off'
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    entity_id: light.kitchen_lights
+  - choose:
+    - conditions:
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: media_player.livingroom_tv
+          state: playing
+      sequence:
+      - service: light.turn_off
+        data: {}
+        entity_id: light.livingroom_lights
+    default: []
+  - service: light.turn_off
+    data: {}
+    entity_id: light.garage_lights
+  mode: single
+- id: '1609140840031'
+  alias: Lights Bedroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.occupance_bedroom
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: input_select.mode
+          state: NIGHT
+        - condition: state
+          entity_id: input_select.mode
+          state: MOVIE
+      sequence:
+      - type: toggle
+        device_id: 664295b695144da0ba0c6d16e55f32c2
+        entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+        domain: light
+    default: []
+  - service: light.turn_off
+    data: {}
+    entity_id: light.guestroom_lights
+  - choose:
+    - conditions:
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: input_select.mode
+          state: MOVIE
+      sequence:
+      - service: light.turn_off
+        data: {}
+        entity_id: light.livingroom_lights
+    default: []
+  - service: light.turn_off
+    data: {}
+    entity_id: light.kitchen_lights
+  mode: single
+- id: '1609141494346'
+  alias: Occupance Livingroom
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: d1f37ab4f79b1206ffd2a24763bcb27e
+    entity_id: binary_sensor.motion_livingroom_sensor_3
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_bedroom
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.occupance_livingroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_garrage
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_guestroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_kitchen
+  mode: single
+- id: '1609141633619'
+  alias: Occupance Kitchen
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: d9d1cc2a659345e37c2da8bbae7cf1ce
+    entity_id: binary_sensor.motion_kitchen_sensor_4
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_livingroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_bedroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_garrage
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_guestroom
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.occupance_kitchen
+  mode: single
+- id: '1609377258372'
+  alias: Occupance Bedroom
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 8fe3211956cd45269a85af492210d708
+    entity_id: binary_sensor.aeon_labs_zw100_multisensor_6_sensor
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_livingroom
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.occupance_bedroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_garrage
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_guestroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_kitchen
+  mode: single
+- id: '1609377313627'
+  alias: Occupance Guestroom
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 8ac104ce698431222370fa577e25605b
+    entity_id: binary_sensor.ecolink_motion_sensor_sensor
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_livingroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_bedroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_garrage
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.occupance_guestroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_kitchen
+  mode: single
+- id: '1609378466564'
+  alias: Occupance Garage
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 0a8818bc8b124d27ec111f16c86b2300
+    entity_id: binary_sensor.motion_garage_sensor_2
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_livingroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_bedroom
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.occupance_garrage
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_guestroom
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.occupance_kitchen
+  mode: single
+- id: '1609380585387'
+  alias: Lights Guestroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.occupance_guestroom
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  - service: light.turn_off
+    data: {}
+    entity_id: light.livingroom_lights
+  - service: light.turn_off
+    data: {}
+    entity_id: light.guestroom_lights
+  - service: light.turn_on
+    data: {}
+    entity_id: light.guestroom_lights
+  mode: single
+- id: '1609390824325'
+  alias: Walmote Bedroom 1 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 26
+      scene_id: 1
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: toggle
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  mode: single
+- id: '1609391925274'
+  alias: Walmote Bedroom 2 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 26
+      scene_id: 2
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: brightness_increase
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  mode: single
+- id: '1609391955070'
+  alias: Walmote Bedroom 4 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 26
+      scene_id: 4
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: brightness_decrease
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  mode: single
+- id: '1609392019785'
+  alias: Walmote Bedroom 1 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 26
+      scene_id: 1
+      scene_data: 2
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.livingroom_bulbs_100
+  mode: single
+- id: '1609392126551'
+  alias: Walmote Bedroom 3 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 26
+      scene_id: 3
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: toggle
+    device_id: 77a58cddd7cab7627d860fd37c457c3d
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_4
+    domain: switch
+  mode: single
+- id: '1609392323478'
+  alias: Walmote Livingroom 1 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 1
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: light.toggle
+    data: {}
+    entity_id: light.livingroom_lights
+  mode: single
+- id: '1609392395655'
+  alias: Walmote Livingroom 1 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 1
+      scene_data: 2
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.kitchen_lights_100
+  mode: single
+- id: '1609392446134'
+  alias: Walmote Livingroom 2 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 2
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.livingroom_bulbs_50
+  mode: single
+- id: '1609392488294'
+  alias: Walmote Livingroom 4 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 4
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.livingroom_bulbs
+  mode: single
+- id: '1609392669945'
+  alias: Walmote Livingroom 4 tap sengled 1
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 4
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: brightness_decrease
+    device_id: 54f8031e93e3ae7964f61ab816569209
+    entity_id: light.sengled_livingroom_1_level_on_off
+    domain: light
+  mode: single
+- id: '1609392694397'
+  alias: Walmote Livingroom 4 tap sengled 2
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 4
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: brightness_decrease
+    device_id: 3bc5570aa34dd30941bf0f98dd3cbeb4
+    entity_id: light.sengled_livingroom_2_level_on_off
+    domain: light
+  mode: single
+- id: '1609392899782'
+  alias: Walmote Livingroom 2 hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 2
+      scene_data: 2
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.kitchen_lights_100
+  mode: single
+- id: '1609392966573'
+  alias: Walmote Livingroom 4 hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 4
+      scene_data: 2
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.kitchen_bulbs_30
+  mode: single
+- id: '1609394106084'
+  alias: ModeNight
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: NIGHT
+  condition: []
+  action:
+  - scene: scene.all_lights_off
+  - type: turn_on
+    device_id: 12905b6a9a4cab75781ccdd2da279f22
+    entity_id: switch.wemo_noise2
+    domain: switch
+  - type: turn_on
+    device_id: 47758fdfb898541b6f0ebde53dadbd03
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_2
+    domain: switch
+  - service: alarm_control_panel.alarm_arm_night
+    data:
+      !secret security_home_code
+    entity_id: alarm_control_panel.home_security
+  - service: notify.alexa_media
+    data:
+      message: Good night Sam
+      data:
+        type: tts
+      target: media_player.BEDROOM
+  - type: turn_off
+    device_id: 4f8a39eb7c7037ba2dfce69cb6e0e18b
+    entity_id: switch.cellular_lamp
+    domain: switch
+  - delay: 00:01:30
+  - type: turn_off
+    device_id: 47758fdfb898541b6f0ebde53dadbd03
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_2
+    domain: switch
+  - service: notify.alexa_media
+    data:
+      message: Sweet dreams. sleep tight.
+      data:
+        type: tts
+      target: media_player.BEDROOM
+  mode: single
+- id: '1609394416911'
+  alias: Humidity is Low
+  description: ''
+  trigger:
+  - type: value
+    platform: device
+    device_id: 8fe3211956cd45269a85af492210d708
+    entity_id: sensor.aeon_labs_zw100_multisensor_6_relative_humidity
+    domain: sensor
+    above: 0
+    below: 52
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: turn_on
+    device_id: 078129eb2f3e1552cc6692276678d13f
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch
+    domain: switch
+  mode: single
+- id: '1609394524503'
+  alias: Humidity is High
+  description: ''
+  trigger:
+  - type: value
+    platform: device
+    device_id: 8fe3211956cd45269a85af492210d708
+    entity_id: sensor.aeon_labs_zw100_multisensor_6_relative_humidity
+    domain: sensor
+    above: 52
+    below: 100
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: turn_off
+    device_id: 078129eb2f3e1552cc6692276678d13f
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch
+    domain: switch
+  mode: single
+- id: '1609397771323'
+  alias: ModeLeaving
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: LEAVING
+  condition: []
+  action:
+  - service: notify.alexa_media
+    data:
+      message: See you later SAM!
+      data:
+        type: tts
+      target: media_player.livingroom
+  - device_id: cfad42c9fafcf7dce710fdb4396be93c
+    domain: climate
+    entity_id: climate.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat_mode
+    type: set_hvac_mode
+    hvac_mode: 'off'
+  - type: turn_off
+    device_id: 078129eb2f3e1552cc6692276678d13f
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch
+    domain: switch
+  mode: single
+- id: '1609397769883'
+  alias: Tracker Arriving
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.sam
+    to: home
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option: ARRIVING
+    entity_id: input_select.mode
+  mode: single
+- id: '1609437218647'
+  alias: Walmote Livingroom 3 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 3
+      scene_data: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: light.toggle
+    data: {}
+    entity_id: light.kitchen_lights
+  mode: single
+- id: '1609438076034'
+  alias: Cron Morning
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:00:00
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: input_select.select_option
+    data:
+      option: MORNING
+    entity_id: input_select.mode
+  mode: single
+- id: '1609438273209'
+  alias: ModeTwilight
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 03:00:00
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: input_select.select_option
+    data:
+      option: TWILIGHT
+    entity_id: input_select.mode
+  mode: single
+- id: '1609438426614'
+  alias: Scene Mode Twilight
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: TWILIGHT
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.livingroom_bulbs
+  - scene: scene.kitchen_bulbs_30
+  - scene: scene.bedroom_bulbs_30
+  mode: single
+- id: '1609485829584'
+  alias: Walmote Livingroom 3 hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 41
+      scene_id: 3
+      scene_data: 2
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option: LEAVING
+    entity_id: input_select.mode
+  mode: single
+- id: '1609486788186'
+  alias: aaTest mp3
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    from: MORNING
+    to: HOME
+  condition: []
+  action:
+  - service: media_player.volume_set
+    entity_id: media_player.pizero
+    data:
+      entity_id: media_player.pizero
+      volume_level: 0.8
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.pizero
+      media_content_id: http://192.168.1.101:8123/local/Sounds/Angels.mp3
+      media_content_type: audio/mp3
+    entity_id: media_player.pizero
+  mode: single
+- id: '1609553523375'
+  alias: ModeArrivingToHome
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 1d6f4bf0c6c87477b15abe9e3556925c
+    entity_id: binary_sensor.door_garage_entry_sensor_4
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 433f0b94646f4ce3e5e0dbfae902cd40
+    entity_id: binary_sensor.door_front_sensor_3
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: input_select.mode
+    state: ARRIVING
+  action:
+  - service: input_select.select_option
+    data:
+      option: HOME
+    entity_id: input_select.mode
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.wake_up_light_alarm_with_sunrise_effect_2
+  - delay: 00:06:00
+  - service: notify.alexa_media
+    data:
+      message: Hi Sam! Welcome Home!
+      data:
+        type: tts
+      target: media_player.livingroom
+  mode: single
+- id: '1609553693817'
+  alias: Lights Garage
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 1d6f4bf0c6c87477b15abe9e3556925c
+    entity_id: binary_sensor.door_garage_entry_sensor_4
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: aa15191bc30029237c09b00d5f97422f
+    entity_id: binary_sensor.door_garage_sensor_2
+    domain: binary_sensor
+  - platform: state
+    entity_id: input_boolean.occupance_garrage
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: light.turn_on
+    data: {}
+    entity_id: light.garage_lights
+  mode: single
+- id: '1609558151435'
+  alias: ModeMorningToHome
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: d1f37ab4f79b1206ffd2a24763bcb27e
+    entity_id: binary_sensor.motion_livingroom_sensor_3
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: input_select.mode
+    state: MORNING
+  action:
+  - service: notify.alexa_media
+    data:
+      message: Hi Sam! Good MORNING!
+      data:
+        type: tts
+      target: media_player.livingroom
+  - service: input_select.select_option
+    data:
+      option: HOME
+    entity_id: input_select.mode
+  - scene: scene.livingroom_bulbs_100
+  - scene: scene.kitchen_lights_100
+  mode: single
+- id: '1609602141013'
+  alias: Wake-up light alarm with sunrise effect
+  description: ''
+  use_blueprint:
+    path: sbyx/wake-up-light-alarm-with-sunrise-effect.yaml
+    input:
+      end_brightness: '255'
+      light_entity: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+      sunrise_duration: '15'
+      manual_time: '6:15:00'
+      timestamp_sensor: none
+      pre_sunrise_actions:
+      - type: turn_off
+        device_id: 12905b6a9a4cab75781ccdd2da279f22
+        entity_id: switch.wemo_noise2
+        domain: switch
+- id: '1609605534291'
+  alias: Security Armed Night
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 433f0b94646f4ce3e5e0dbfae902cd40
+    entity_id: binary_sensor.door_front_sensor_3
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: da2cf565eada316a2ed8d2c70769dfca
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 1d6f4bf0c6c87477b15abe9e3556925c
+    entity_id: binary_sensor.door_garage_entry_sensor_4
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: aa15191bc30029237c09b00d5f97422f
+    entity_id: binary_sensor.door_garage_sensor_2
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 8ac104ce698431222370fa577e25605b
+    entity_id: binary_sensor.ecolink_motion_sensor_sensor
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: d1f37ab4f79b1206ffd2a24763bcb27e
+    entity_id: binary_sensor.motion_livingroom_sensor_3
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: d9d1cc2a659345e37c2da8bbae7cf1ce
+    entity_id: binary_sensor.motion_kitchen_sensor_4
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 0a8818bc8b124d27ec111f16c86b2300
+    entity_id: binary_sensor.motion_garage_sensor_2
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.home_security
+    state: armed_night
+  action:
+  - scene: scene.bedroom_bulbs_100
+  - scene: scene.kitchen_lights_100
+  - scene: scene.livingroom_bulbs_100
+  - service: light.turn_on
+    data: {}
+    entity_id: light.guestroom_lights
+  - service: notify.mobile_app_galaxy_tab_a
+    data:
+      message: ALARM! The alarm has been triggered
+  - service: notify.mobile_app_galaxy_s8
+    data:
+      message: ALARM! The alarm has been triggered
+  mode: single
+- id: '1609607458803'
+  alias: Security Armed Away
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 433f0b94646f4ce3e5e0dbfae902cd40
+    entity_id: binary_sensor.door_front_sensor_3
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: da2cf565eada316a2ed8d2c70769dfca
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 1d6f4bf0c6c87477b15abe9e3556925c
+    entity_id: binary_sensor.door_garage_entry_sensor_4
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: aa15191bc30029237c09b00d5f97422f
+    entity_id: binary_sensor.door_garage_sensor_2
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 8ac104ce698431222370fa577e25605b
+    entity_id: binary_sensor.ecolink_motion_sensor_sensor
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: d1f37ab4f79b1206ffd2a24763bcb27e
+    entity_id: binary_sensor.motion_livingroom_sensor_3
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: d9d1cc2a659345e37c2da8bbae7cf1ce
+    entity_id: binary_sensor.motion_kitchen_sensor_4
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 0a8818bc8b124d27ec111f16c86b2300
+    entity_id: binary_sensor.motion_garage_sensor_2
+    domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: 8fe3211956cd45269a85af492210d708
+    entity_id: binary_sensor.aeon_labs_zw100_multisensor_6_sensor
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.home_security
+    state: armed_away
+  action:
+  - type: turn_on
+    device_id: 1879aeb75861643db977ab956506fd46
+    entity_id: switch.aeon_labs_zw080_siren_gen5_switch
+    domain: switch
+  - service: wled.preset
+    data:
+      preset: 3
+    entity_id: light.wled_5mstrip
+  - service: notify.mobile_app_galaxy_s8
+    data:
+      message: ALARM! The alarm has been triggered
+  - service: notify.mobile_app_galaxy_tab_a
+    data:
+      message: ALARM! The alarm has been triggered
+  mode: single
+- id: '1609617257096'
+  alias: Security Siren Off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.home_security
+    to: disarmed
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1879aeb75861643db977ab956506fd46
+    entity_id: switch.aeon_labs_zw080_siren_gen5_switch
+    domain: switch
+  mode: single
+- id: '1609617770420'
+  alias: ModeArriving
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: device_tracker.hostone
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option: ARRIVING
+    entity_id: input_select.mode
+  - type: flash
+    device_id: 54f8031e93e3ae7964f61ab816569209
+    entity_id: light.sengled_livingroom_1_level_on_off
+    domain: light
+  - type: flash
+    device_id: 3bc5570aa34dd30941bf0f98dd3cbeb4
+    entity_id: light.sengled_livingroom_2_level_on_off
+    domain: light
+  - scene: scene.bedroom_bulbs_100
+  - scene: scene.kitchen_lights_100
+  - device_id: cfad42c9fafcf7dce710fdb4396be93c
+    domain: climate
+    entity_id: climate.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat_mode
+    type: set_hvac_mode
+    hvac_mode: heat
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.vacation
+  mode: single
+- id: '1609639896748'
+  alias: Ender Print Job Finished
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.ender3_current_state
+    from: Printing
+    to: Operational
+  - platform: state
+    entity_id: sensor.ender3_current_state
+    from: Finishing
+    to: Operational
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: NIGHT
+  action:
+  - service: notify.alexa_media
+    data:
+      message: Sam, your print job is finished now!
+      data:
+        type: tts
+      target: media_player.livingroom
+  mode: single
+- id: '1609651562695'
+  alias: Movie Livingroom Intermission
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.livingroom_tv
+    to: paused
+  - platform: state
+    entity_id: media_player.livingroom_tv
+    to: idle
+  - platform: state
+    entity_id: media_player.livingroom_tv
+    to: 'off'
+  condition: []
+  action:
+  - scene: scene.movie_intermission
+  mode: single
+- id: '1609652373775'
+  alias: Movie Bedroom not playing
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    to: idle
+  - platform: state
+    entity_id: media_player.bedroom_tv
+    to: paused
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+    brightness_pct: 35
+  mode: single
+- id: '1609660220135'
+  alias: NFC Leaving
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 7acd0756-20ce-41d9-9183-e05427dc5712
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option: LEAVING
+    entity_id: input_select.mode
+  mode: single
+- id: '1609660276254'
+  alias: NFC Night
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 16466b9b-251d-49f7-86cb-b16a47e9f610
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option:
+    entity_id: input_select.mode
+  mode: single
+- id: '1609690103156'
+  alias: Mode Morning
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: MORNING
+    from: NIGHT
+  condition: []
+  action:
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.home_security
+    data:
+      !secret security_home_code
+  - type: turn_off
+    device_id: 12905b6a9a4cab75781ccdd2da279f22
+    entity_id: switch.wemo_noise2
+    domain: switch
+  - type: turn_on
+    device_id: 4f8a39eb7c7037ba2dfce69cb6e0e18b
+    entity_id: switch.cellular_lamp
+    domain: switch
+  mode: single
+- id: '1609690318978'
+  alias: Mode Arriving
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: ARRIVING
+    from: AWAY
+  condition: []
+  action:
+  - service: alarm_control_panel.alarm_disarm
+    data:
+      !secret security_home_code
+    entity_id: alarm_control_panel.home_security
+  - type: turn_on
+    device_id: 3f556de09c83f1f856d2875d9032a847
+    entity_id: switch.shelly1_8caab5c4f2bc
+    domain: switch
+  - scene: scene.all_lights_on
+  - device_id: cfad42c9fafcf7dce710fdb4396be93c
+    domain: climate
+    entity_id: climate.linear_nortek_security_control_llc_gc_tbz48_battery_powered_z_wave_thermostat_mode
+    type: set_hvac_mode
+    hvac_mode: heat
+  - choose:
+    - conditions:
+      - type: is_value
+        condition: device
+        device_id: 8fe3211956cd45269a85af492210d708
+        entity_id: sensor.aeon_labs_zw100_multisensor_6_relative_humidity
+        domain: sensor
+        below: 52
+      sequence:
+      - type: turn_on
+        device_id: 078129eb2f3e1552cc6692276678d13f
+        entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch
+        domain: switch
+    default: []
+  mode: single
+- id: '1609690512270'
+  alias: Mode Away
+  description: ''
+  trigger:
+  - type: turned_off
+    platform: device
+    device_id: aa15191bc30029237c09b00d5f97422f
+    entity_id: binary_sensor.door_garage_sensor_2
+    domain: binary_sensor
+  - type: turned_off
+    platform: device
+    device_id: 433f0b94646f4ce3e5e0dbfae902cd40
+    entity_id: binary_sensor.door_front_sensor_3
+    domain: binary_sensor
+  condition:
+  - condition: state
+    entity_id: input_select.mode
+    state: LEAVING
+  action:
+  - scene: scene.all_lights_off
+  - service: input_select.select_option
+    data:
+      option: AWAY
+    entity_id: input_select.mode
+  - service: alarm_control_panel.alarm_arm_away
+    data:
+      !secret security_home_code
+    entity_id: alarm_control_panel.home_security
+  - service: automation.turn_off
+    data: {}
+    entity_id: automation.wake_up_light_alarm_with_sunrise_effect_2
+  mode: single
+- id: '1609720763889'
+  alias: Minimote Bedroom 1 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 1
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: toggle
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  mode: single
+- id: '1609721897758'
+  alias: Minimote Bedroom 1 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 2
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - scene: scene.bedroom_bulbs_100
+  mode: single
+- id: '1609722080309'
+  alias: Minimote Bedroom 2 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 3
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: brightness_increase
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  mode: single
+- id: '1609722306214'
+  alias: Minimote Bedroom 3 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 5
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: toggle
+    device_id: 77a58cddd7cab7627d860fd37c457c3d
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_4
+    domain: switch
+  mode: single
+- id: '1609722306215'
+  alias: Minimote Bedroom 3 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      identity_id: zwave.minimote_2
+      scene_id: 6
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: input_select.select_option
+    data:
+      option:
+    entity_id: input_select.mode
+  mode: single
+- id: '1609722674126'
+  alias: Minimote Bedroom 3 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 6
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: input_select.select_option
+    data:
+      option:
+    entity_id: input_select.mode
+  mode: single
+- id: '1609723319433'
+  alias: Minimote Bedroom 4 tap
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 7
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: brightness_decrease
+    device_id: 664295b695144da0ba0c6d16e55f32c2
+    entity_id: light.evolve_guest_controls_unknown_type_4450_id_3030_level
+    domain: light
+  mode: single
+- id: '1609723440363'
+  alias: Minimote Bedroom 4 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.minimote_2
+      scene_id: 8
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - type: toggle
+    device_id: 6993448c763c812aebdf16bc0bf6a557
+    entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_3
+    domain: switch
+  mode: single
+- id: '1609753296257'
+  alias: Tracker People
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.sam
+  - platform: state
+    entity_id: person.nicole
+  - platform: state
+    entity_id: person.dennis
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: and
+        conditions:
+        - condition: state
+          entity_id: person.sam
+          state: away
+        - condition: state
+          entity_id: person.nicole
+          state: away
+        - condition: state
+          entity_id: person.dennis
+          state: away
+      sequence:
+      - service: input_boolean.turn_off
+        data: {}
+        entity_id: input_boolean.people_are_home
+    default:
+    - service: input_boolean.turn_on
+      data: {}
+      entity_id: input_boolean.people_are_home
+  mode: single
+- id: '1609849182036'
+  alias: Vacation Lights Off
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition:
+  - condition: state
+    entity_id: input_select.mode
+    state: AWAY
+  action:
+  - scene: scene.all_lights_off
+  - service: notify.mobile_app_galaxy_s8
+    data:
+      message: Vacation lights sequence stopped.
+  - service: notify.mobile_app_galaxy_tab_a
+    data:
+      message: Vacation lights sequence stopped.
+  mode: single
+- id: '1609851577319'
+  alias: Walmote Bedroom 4 Hold
+  description: ''
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      node_id: 26
+      scene_id: 4
+      scene_data: 2
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: alarm_control_panel.home_security
+        state: arm_night
+      sequence:
+      - service: alarm_control_panel.alarm_disarm
+        data:
+          !secret security_home_code
+        entity_id: alarm_control_panel.home_security
+      - type: turn_on
+        device_id: 47758fdfb898541b6f0ebde53dadbd03
+        entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_2
+        domain: switch
+    default:
+    - service: alarm_control_panel.alarm_arm_night
+      data:
+        !secret security_home_code
+      entity_id: alarm_control_panel.home_security
+    - type: turn_off
+      device_id: 47758fdfb898541b6f0ebde53dadbd03
+      entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch_2
+      domain: switch
+  mode: single
+- id: '1609902609485'
+  alias: Vacation Bedroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.vacation
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'on'
+      sequence:
+      - service: light.toggle
+        data: {}
+        entity_id: light.bedroom_lights
+      - delay: 00:{{ '{:02}'.format(range(0,20) | random | int) }}:00
+  mode: single
+  initial_state: true
+- id: '1609902609484'
+  alias: Vacation Livingroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.vacation
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'on'
+      sequence:
+      - service: light.toggle
+        data: {}
+        entity_id: light.livingroom_lights
+      - delay: 00:{{ '{:02}'.format(range(0,20) | random | int) }}:00
+  mode: single
+  initial_state: true
+- id: '1609902787449'
+  alias: Vacation Notification
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition:
+  - condition: state
+    entity_id: input_select.mode
+    state: AWAY
+  action:
+  - service: notify.mobile_app_galaxy_s8
+    data:
+      message: Vacation lights sequence started.
+  - service: notify.mobile_app_galaxy_tab_a
+    data:
+      message: Vacation lights sequence started.
+  mode: single
+  initial_state: true
+- id: '1609903426407'
+  alias: Vacation Guestroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.vacation
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'on'
+      sequence:
+      - service: light.toggle
+        data: {}
+        entity_id: light.guestroom_lights
+      - delay: 00:{{ '{:02}'.format(range(0,20) | random | int) }}:00
+  mode: single
+  initial_state: true
+- id: '1609903541627'
+  alias: Vacation Kitchen
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.vacation
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.vacation
+        state: 'on'
+      sequence:
+      - service: light.toggle
+        data: {}
+        entity_id: light.kitchen_lights
+      - delay: 00:{{ '{:02}'.format(range(0,20) | random | int) }}:00
+  mode: single
+  initial_state: true
+- id: '1609905064203'
+  alias: aaTest volume restore
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: script.remember_alexa_volume
+    data:
+      alexa_device: media_player.livingroom
+      alexa_volume: '{{ state_attr(''media_player.livingroom'', ''volume'') | float
+        }}'
+      alexa_message: Hi I should be at volume 70.
+  mode: single
+- id: '1609932893078'
+  alias: Ender Printer Error
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.ender3_printing_error
+    to: 'on'
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: NIGHT
+  action:
+  - service: notify.alexa_media
+    data:
+      message: Sam, There is an error on the Ender !
+      data:
+        type: tts
+      target: media_player.livingroom
+  mode: single
+- id: '1609933610568'
+  alias: Vent Toggle
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.vent_toggle
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: input_boolean.vent_toggle
+        state: 'on'
+      sequence:
+      - type: turn_on
+        device_id: ffc7d2e67655f5bb54d5c3cf87435766
+        entity_id: light.econet_controls_unknown_type_0100_id_0100_level
+        domain: light
+        brightness_pct: 100
+    default:
+    - type: turn_off
+      device_id: ffc7d2e67655f5bb54d5c3cf87435766
+      entity_id: light.econet_controls_unknown_type_0100_id_0100_level
+      domain: light
+  mode: single
+- id: '1609938656724'
+  alias: Wake up trigger
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.wake_up_time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - service: automation.trigger
+    data: {}
+    entity_id: automation.wake_up_light_alarm_with_sunrise_effect_2
+  mode: single
+- id: '1609982065408'
+  alias: Garage Door Opener
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 3f556de09c83f1f856d2875d9032a847
+    entity_id: switch.shelly1_8caab5c4f2bc
+    domain: switch
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - delay: 00:00:01
+  - type: turn_off
+    device_id: 3f556de09c83f1f856d2875d9032a847
+    entity_id: switch.shelly1_8caab5c4f2bc
+    domain: switch
+  mode: single
+- id: '1610170708522'
+  alias: Left Open Garage Door
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: aa15191bc30029237c09b00d5f97422f
+    entity_id: binary_sensor.door_garage_sensor_2
+    domain: binary_sensor
+  condition: []
+  action:
+  - delay: 00:05:00
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.door_garage_sensor_2
+        state: 'on'
+      sequence:
+      - service: notify.mobile_app_galaxy_s8
+        data:
+          message: Garage door left open.
+      - service: notify.mobile_app_galaxy_tab_a
+        data:
+          message: Garage door left open.
+    default: []
+  mode: single
+- id: '1610170712593'
+  alias: Left Open Garage Door
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: aa15191bc30029237c09b00d5f97422f
+    entity_id: binary_sensor.door_garage_sensor_2
+    domain: binary_sensor
+  condition: []
+  action:
+  - delay: 00:10:00
+  - choose:
+    - conditions:
+      - type: is_on
+        condition: device
+        device_id: aa15191bc30029237c09b00d5f97422f
+        entity_id: binary_sensor.door_garage_sensor_2
+        domain: binary_sensor
+        for:
+          hours: 0
+          minutes: 10
+          seconds: 0
+      sequence:
+      - service: notify.mobile_app_galaxy_s8
+        data:
+          message: Garage door left open.
+      - service: notify.mobile_app_galaxy_tab_a
+        data:
+          message: Garage door left open.
+    default: []
+  mode: single
+- id: '1610236060419'
+  alias: Vacation Toggle
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: AWAY
+  - platform: state
+    entity_id: sun.sun
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: input_select.mode
+        state: AWAY
+      - condition: state
+        entity_id: sun.sun
+        state: below_horizon
+      sequence:
+      - service: input_boolean.turn_on
+        data: {}
+        entity_id: input_boolean.vacation
+    default:
+    - service: input_boolean.turn_off
+      data: {}
+      entity_id: input_boolean.vacation
+  mode: single
+  initial_state: true
+- id: '1610253460107'
+  alias: Low battery level detection & notification for all battery sensors
+  description: ''
+  use_blueprint:
+    path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      day: '0'
+      threshold: '30'
+      time: '18:00:00'
+      actions:
+      - service: notify.mobile_app_galaxy_tab_a
+        data:
+          message: Battery low on {{sensors}}
+      - service: notify.mobile_app_galaxy_s8
+        data:
+          message: Battery low on {{sensors}}
+- id: '1610423750068'
+  alias: Mode Movie
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.livingroom_tv
+  - platform: state
+    entity_id: media_player.bedroom_tv
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.mode
+      state: AWAY
+  action:
+  - choose:
+    - conditions:
+      - condition: device
+        device_id: 60f8da94811bca2ccbd592cfa0a73db2
+        domain: media_player
+        entity_id: media_player.bedroom_tv
+        type: is_playing
+      - condition: device
+        device_id: dd14544b0191057bfe378dfcb34d2636
+        domain: media_player
+        entity_id: media_player.livingroom_tv
+        type: is_playing
+      sequence:
+      - service: input_select.select_option
+        data:
+          option: MOVIE
+    default:
+    - service: input_select.select_option
+      data:
+        option: HOME
+  mode: single
+- id: '1610472699073'
+  alias: Kill Switch
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.kill_switch
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1879aeb75861643db977ab956506fd46
+    entity_id: switch.aeon_labs_zw080_siren_gen5_switch
+    domain: switch
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.kill_switch
+  mode: single
+- id: '1610572851012'
+  alias: Mode Home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.mode
+    to: HOME
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - type: is_value
+        condition: device
+        device_id: 8fe3211956cd45269a85af492210d708
+        entity_id: sensor.aeon_labs_zw100_multisensor_6_relative_humidity
+        domain: sensor
+        below: 53
+      sequence:
+      - type: turn_on
+        device_id: 078129eb2f3e1552cc6692276678d13f
+        entity_id: switch.jasco_products_12719_plug_in_smart_switch_switch
+        domain: switch
+    default: []
+  - service: automation.turn_on
+    data: {}
+    entity_id: automation.wake_up_light_alarm_with_sunrise_effect_2
+  mode: single
+- id: '1610602314263'
+  alias: Smoke Detected Livingroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.smoke_detector_livingroom
+    to: smoke
+  - platform: state
+    entity_id: sensor.smoke_detector_livingroom
+    to: co
+  condition: []
+  action:
+  - service: notify.mobile_app_galaxy_s8
+    data:
+      message: ALERT! Smoke detected in livingroom!
+  - service: notify.mobile_app_galaxy_tab_a
+    data:
+      message: ALERT! Smoke detected in livingroom!
+  mode: single
+- id: '1610602348149'
+  alias: Smoke Detected Guestroom
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.smoke_detector_luestgroom
+    to: smoke
+  - platform: state
+    entity_id: sensor.smoke_detector_luestgroom
+    to: co
+  condition: []
+  action:
+  - service: notify.mobile_app_galaxy_s8
+    data:
+      message: ALERT! Smoke detected in livingroom!
+  - service: notify.mobile_app_galaxy_tab_a
+    data:
+      message: ALERT! Smoke detected in livingroom!
+  mode: single
+- id: '1610755530057'
+  alias: Movie Livingroom Playing
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.livingroom_tv
+    to: playing
+  condition: []
+  action:
+  - scene: scene.movie_livingroom
+  mode: single
+- id: '1610886236166'
+  alias: Wake up enable
+  description: ''
+  trigger:
+  - platform: time
+    at: 01:00:00
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: time
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      sequence:
+      - service: automation.turn_on
+        data: {}
+        entity_id: automation.wake_up_light_alarm_with_sunrise_effect_2
+    default:
+    - service: automation.turn_off
+      data: {}
+      entity_id: automation.wake_up_light_alarm_with_sunrise_effect_2
+  mode: single

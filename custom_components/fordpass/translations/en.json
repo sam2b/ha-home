@@ -1,0 +1,33 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Account is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "password": "FordPass Password",
+                    "username": "FordPass Username (Email)",
+                    "vin": "VIN",
+                    "region" : "FordPass Region"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+        "init": {
+            "data": {
+            "units": "Unit of Measurement"
+            },
+            "description": "Configure fordpass options"
+        }
+        }
+    },
+    "title": "FordPass"
+}

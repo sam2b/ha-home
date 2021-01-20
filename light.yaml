@@ -1,0 +1,27 @@
+- platform: group
+  name: Kitchen Lights
+  entities:
+    - light.osram_kitchen_3_level_on_off
+    - light.osram_tunable_kitchen_1_level_light_color_on_off
+    - light.osram_tunable_kitchen_2_level_light_color_on_off
+    - light.cree_kitchen_4level_on_off
+- platform: group
+  name: Livingroom Lights
+  entities:
+    - light.sengled_livingroom_1_level_on_off
+    - light.sengled_livingroom_2_level_on_off
+    - light.linear_nortek_security_control_llc_pd300z_2_plug_in_dimmer_module_level
+- platform: group
+  name: Bedroom Lights
+  entities:
+    - light.evolve_guest_controls_unknown_type_4450_id_3030_level
+- platform: group
+  name: Garage Lights
+  entities:
+    - light.cree_garage_1level_on_off
+    - light.cree_garage_2_level_on_off
+- platform: group
+  name: Guestroom Lights
+  entities:
+    - light.cree_guest_1level_on_off
+    - light.cree_guest_2level_on_off

@@ -1,0 +1,20 @@
+remember_alexa_volume:
+  alias: Remember Alexa Volume
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: '{{ alexa_device }}'
+      volume_level: 0.7
+    entity_id: media_player.livingroom
+  - service: notify.alexa_media
+    data:
+      message: '{{ alexa_message }}'
+      data:
+        type: tts
+      target: media_player.livingroom
+  - service: media_player.volume_set
+    data:
+      entity_id: '{{ alexa_device }}'
+      volume_level: '{{ alexa_volume }}'
+    entity_id: media_player.livingroom
+  mode: single

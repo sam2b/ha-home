@@ -1,0 +1,48 @@
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'date_time_utc'
+    - 'date_time_iso'
+    - 'time_date'
+    - 'time_utc'
+    - 'beat'
+- platform: template
+  sensors:
+    smoke_detector_livingroom:
+      friendly_name: "Smoke Sensor Livingroom"
+      value_template: >-
+        {% if is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level', '255') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type', '1')  %}
+          smoke
+        {% elif is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level', '255') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type', '2')  %}
+          co
+        {% elif is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level', '0') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type', '12')  %}
+          test
+        {% elif is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level', '255') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type', '13')  %}
+          idle
+        {% endif %}
+- platform: template
+  sensors:
+    smoke_detector_luestgroom:
+      friendly_name: "Smoke Sensor Guestroom"
+      value_template: >-
+        {% if is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level_2', '255') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type_2', '1') %}
+          smoke
+        {% elif is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level_2', '255') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type_2', '2') %}
+          co
+        {% elif is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level_2', '0') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type_2', '12') %}
+          test
+        {% elif is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level_2', '255') and is_state('sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type_2', '13') %}
+          idle
+        {% endif %}
+- platform: template
+  sensors:
+    doors_all:
+      friendly_name: "All Doors"
+      value_template: >-
+        {% if is_state('binary_sensor.door_front_sensor_3', 'on') or is_state('binary_sensor.door_garage_entry_sensor_4', 'on') or is_state('binary_sensor.door_garage_sensor_2', 'on') or is_state('binary_sensor.ecolink_door_window_sensor_sensor', 'on') %}
+        open
+        {% else %}
+        closed
+        {% endif %}

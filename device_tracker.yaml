@@ -1,0 +1,3 @@
+- platform: ping
+  hosts:
+    hostone: !secret ip_nissan

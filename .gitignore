@@ -1,0 +1,15 @@
+*.db
+*.xml
+*.sqlite
+*.txt
+*.log
+HRNC89~X
+
+.cloud
+.storage
+.vscode
+deps
+node-red
+themes
+tts
+www

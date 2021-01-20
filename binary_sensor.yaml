@@ -1,0 +1,10 @@
+- platform: ping
+  host: !secret ip_nissan
+  name: Nissan Versa ESP8266
+  count: 4
+  scan_interval: 5
+
+- platform: octoprint
+  monitored_conditions:
+    - Printing
+    - Printing Error
